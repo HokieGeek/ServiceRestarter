@@ -51,6 +51,7 @@ func main() {
 	}
 	id := flag.Arg(0)
 
+	logger.Printf("Using port: %d\n", *portPtr)
 	logger.Printf("Using identifier: %s\n", id)
 
 	mux := http.NewServeMux()
