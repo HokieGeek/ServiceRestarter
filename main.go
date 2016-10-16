@@ -13,7 +13,7 @@ import (
 
 func restartService(log *log.Logger, serviceName string) {
 	log.Printf("Restarting %s\n", serviceName)
-	cmd := exec.Command("/usr/bin/systemctl", "restart", serviceName)
+	cmd := exec.Command("systemctl", "restart", serviceName)
 	out, err := cmd.Output()
 	if err != nil {
 		log.Printf("ERROR: %s\n", err)
